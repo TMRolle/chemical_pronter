@@ -54,7 +54,7 @@ If the mobile plate is rotated 120 degrees clockwise, things start to get intere
 
 main loop in ---> short loopback tube ---> device port A ---> [device] ---> device port B ---> main loop out
 
-We've effectively added our device to the main path!
+We've effectively diverted the flow, and added our device to the main path!
 
 ### Reverse
 
@@ -62,15 +62,17 @@ If the mobile plate is rotated 120 degrees *counterclockwise*, then things get e
 
 main loop in ---> device port B ---> [device] ---> device port A ---> short loopback tube ---> main loop out
 
-Simply by changing the valve position, we have "flipped our condenser upside down" so to speak. If our device is a condenser, that is.
+Simply by changing the valve position, we have "flipped our condenser upside down" so to speak. If our device is a condenser, that is. But anyway, we're still diverting the main flow through our device, but now it's going through our device in the other direction.
 
 ## The implication
 
-This means that you can take all your equipment - your pumps, your reactor, your condensers, a bunch of old mason jars filled with solvents and reagents, your filtration setup, whatever - throw it all on the main loop, and then let the software figure out how to hook it all together to make whatver setup you need. It effectively reduces apparatus assembly into a software pathfinding challenge, and any software guy can tell you, if there's a way, A* will find it.
+This means that you can take all your equipment - your pumps, your reactor, your condensers, a bunch of old mason jars filled with solvents and reagents, your filtration setup, whatever - throw it all in one big main loop, and then let the software figure out how to hook it all together to make whatver setup you need. It effectively reduces apparatus assembly into a software pathfinding challenge, and any software guy can tell you, if there's a way, A* will find it.
 
 But most importantly, you can serialize operations. With just software. A 10-step synthesis can be performed by literally just putting the right starting materials in the right jars, hitting "print", and walking away.
 
 Actually no, please don't walk away, it probably is a good idea to keep an eye on it with a fire extinguisher, just in case. But you get the idea.
+
+Also, side note, a loop can be a device too, allowing for subloops. This probably has some implications or something, if I knew topology better maybe I could tell you what they were. 
 
 ## ToDo: Finish the rest of the docs
 
